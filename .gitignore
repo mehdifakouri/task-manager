@@ -306,4 +306,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+test_db.py
+
 # End of https://www.toptal.com/developers/gitignore/api/pycharm+iml,python,windows,visualstudiocode
