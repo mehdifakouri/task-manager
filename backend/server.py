@@ -144,6 +144,13 @@ class TaskApiHandler(BaseHTTPRequestHandler):
             return
         self.send_json({"error": "not found"}, 404)
 
+    def do_OPTIONS(self):
+        """پاسخ به preflight request برای cors"""
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS, POST, PUT, DELETE')
+        self.send_header('Access-Control-Allow-Headers', 'content-type')
+        self.end_headers()
     #---------------------------------------------------------
     # Run Server
     #---------------------------------------------------------
